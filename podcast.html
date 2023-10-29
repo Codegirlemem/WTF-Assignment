@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Podcast</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0 60px 0 60px;
+        padding-left: 50px;
+        font-family: sans-serif;
+        font-size: 24px;
+        font-weight: 500;
+        color: #444;
+        height: 100vh;
+      }
+      header {
+        margin: 0 0 50px 80px;
+      }
+      /* main {
+        width: 75%;
+      } */
+
+      h1 {
+        margin-bottom: 10px;
+        font-size: 40px;
+      }
+
+      header div {
+        margin-top: 40px;
+      }
+      .header-paragraph,
+      span {
+        color: #868686b3;
+      }
+      .header-paragraph {
+        margin-top: 0;
+      }
+      .podcast-video {
+        border: 2px solid rgba(221, 219, 219, 0.664);
+        border-radius: 15px;
+        margin: 0 0 45px 60px;
+        width: 60vw;
+        height: 45vh;
+      }
+
+      /* section {
+        margin-top: 24px;
+      } */
+      .section-div {
+        display: flex;
+        align-items: start;
+        gap: 24px;
+      }
+
+      h4 {
+        margin: 0 auto;
+      }
+      section p {
+        line-height: 1.8;
+        width: 70%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Faustina &lt &gt John (User Interview)</h1>
+      <p class="header-paragraph">Created on Sep 17, 11:54 AM</p>
+
+      <div>
+        <p>
+          <strong>Project:</strong> Staying connected in post-pandemic world
+        </p>
+        <p><strong>Moderator:</strong> <span>Speaker 1</span></p>
+        <p><strong>Participant:</strong> <span>Speaker 2</span></p>
+      </div>
+    </header>
+    <main>
+      <video class="podcast-video" controls muted loop>
+        <source src="podcastvideo.mp4" type="video/mp4" />
+        <source src="podcastwebm.webm" type="video/webm" />
+        <p>
+          Your browser does not support this video. Click
+          <a href="https://www.youtube.com/watch?v=edRnrIAmce0&list=PPSV"
+            ><em>here</em> to go to video link
+          </a>
+        </p>
+      </video>
+
+      <section>
+        <div class="section-div">
+          <span>00:05</span>
+          <div>
+            <h4>Speaker 1</h4>
+            <p>
+              How do you feel about the number of video calls you and your team
+              are conducting
+            </p>
+          </div>
+        </div>
+
+        <div class="section-div">
+          <span class="section-div">00:05</span>
+          <div>
+            <h4>Speaker 2</h4>
+            <p>
+              The number of video calls has grown exponentially since our team
+              moved to a remote environment. I feel emotionally and physically
+              drained by the number of calls
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
