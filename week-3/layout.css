@@ -8,7 +8,7 @@ body {
   font-family: sans-serif;
 }
 .container {
-  width: 100%;
+  /* width: 100%; */
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,12 +25,13 @@ body {
 
 .header {
   background-color: #9e1f1bdc;
-  height: 180px;
+  height: 20%;
 }
 
 main {
   display: flex;
   flex: 1;
+  /* width: 100%; */
 }
 
 .section,
@@ -41,17 +42,17 @@ main {
 
 .section {
   background-color: rgba(89, 166, 225, 0.963);
-  width: 100%;
+  width: 60%;
 }
 
 .aside {
   background-color: #af6765ea;
-  flex-basis: 500px;
+  flex-basis: 40%;
 }
 
 .footer {
   background-color: #9e1f1bdc;
-  height: 80px;
+  height: 8%;
 }
 
 .head {
