@@ -1,10 +1,12 @@
 // Question One
 function checkNum(num) {
-  num % 2 == 0 ? console.log("Even Number") : console.log("Odd Number");
+  num % 2 == 0
+    ? console.log("Even Number!")
+    : console.log("Not an even number(odd num!)");
 }
 
-checkNum(7);
-
+// checkNum(7);
+// checkNum(4);
 // Question Two
 
 function numConsole(n1, n2) {
@@ -21,60 +23,30 @@ function numConsole(n1, n2) {
     console.log(n2);
   }
 }
-numConsole(2, 5);
+// numConsole(2, 5);
+// numConsole(3, 1);
 
 // Question Three
 
 function numSum(a, b) {
-  let sum;
+  let sum = 0;
 
   if (a < b) {
     for (let i = a; i <= b; i++) {
-      if (i == a) {
-        sum = a;
-      } else if (i != a) {
-        sum = sum + i;
-      }
+      sum += i;
     }
   } else if (a > b) {
     for (let i = a; i >= b; i--) {
-      if (i == a) {
-        sum = a;
-      } else if (i != a) {
-        sum = sum + i;
-      }
+      sum += i;
     }
   } else {
-    sum = a;
+    sum = a + b;
   }
 
   console.log(sum);
   return sum;
 }
 
-numSum(0.1, 5.1);
-
-// Alternatively
-
-function numAdd(a, b) {
-  let sum = a;
-
-  if (a < b) {
-    for (let i = a; i <= b; i++) {
-      if (i != a) {
-        sum += i;
-      }
-    }
-  } else if (a > b) {
-    for (let i = a; i >= b; i--) {
-      if (i != a) {
-        sum += i;
-      }
-    }
-  }
-
-  console.log(sum);
-  return sum;
-}
-
-numAdd(3, 2);
+// numSum(5, 1);
+// numSum(3, 6);
+// numSum(2, 2);
