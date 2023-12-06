@@ -1,95 +1,79 @@
-function checkNum(num) {
-  num % 2 === 0
-    ? console.log("Even Number")
-    : console.log("Not an even number");
-}
+// Temperature Conversion:Write a program that converts temperatures between Fahrenheit and Celsius. Ask the user for the temperature and the desired conversion.
 
-// function check(num) {
-//   if (num % 2 === 0) {
-//     console.log("even number");
-//   } else if (num % 2 !== 0) {
-//     console.log("not an even number");
-//   }
-// }
+function convert() {
+  let temperature = prompt("Enter a temperature value: ");
+  let unit = prompt("Enter a desired conversion (celsius/fahrenheit): ");
 
-checkNum(15);
-checkNum(92);
-
-// numb 2
-
-//  n1= 10  n2= 1
-
-//  n1 = 1   n2 = 5
-
-//  print 5,6, 7, 8, 9 ,   10
-
-function printNum(n1, n2) {
-  if (n1 < n2) {
-    for (let i = n1; i <= n2; i++) {
-      console.log(i);
-    }
-  } else if (n1 > n2) {
-    for (let i = n1; i >= n2; i--) {
-      console.log(i);
-    }
+  let cal = `${(temperature - 32) * (5 / 9)}° ${unit}`;
+  let fah = `${temperature * (9 / 5) + 32}° ${unit}`;
+  if (unit == "celsius") {
+    console.log(cal);
+    return cal;
   } else {
-    console.log(n1);
-    console.log(n2);
+    console.log(fah);
+    return fah;
   }
 }
-// printNum(1, 5);
 
-// function print(n1, n2) {
-//   let i = n1;
-//   //   while (i <= n2) {
-//   //     console.log(i);
-//   //     i++;
-//   //   }
-//   do {
-//     console.log(i);
-//     i++;
-//   } while (i <= n2);
-// }
-// print(2, 8);
+// convert();
 
-// num 3
+// Number Pyramid:Create a script that prints a number pyramid pattern, where each row contains numbers in ascending order.
 
-// function addNum(num1, num2) {
-//   let sum;
-//   if (num1 < num2) {
-//     for (let i = num1; i <= num2; i++) {
-//       if (i === num1) {
-//         sum = num1;
-//       } else if (i !== num1) {
-//         sum += i;
-//       }
+function numPyramid(num) {
+  number = "";
+  for (let i = 0; i <= num; i++) {
+    number += i;
+    console.log(number);
+  }
+}
+// numPyramid(20);
+
+// Greatest Common Divisor (GCD) Calculator:Write a function that calculates the greatest common divisor (GCD) of two numbers.
+
+function divisor(a, b) {
+  let commonDivisor = [];
+  for (let i = 0; i <= b; i++) {
+    if (a % i === 0 && b % i === 0) {
+      commonDivisor.push(i);
+    }
+  }
+  console.log(commonDivisor);
+  console.log(commonDivisor.pop());
+  return commonDivisor.pop();
+}
+
+// divisor(10, 20);
+
+// ASSIGNMENT
+// Factorial Calculator:Write a function that calculates the factorial of a given number.
+// DO NOT USE PROMPT, I WANT ONLY 1 CONSOLE.LOG, YOUR FUNCTION MUST BE REUSEABLE, AND MUST RETURN A VALUE
+
+// function findFactorial(num) {
+//   let factorial = num;
+//   let start = num - 1;
+
+//   if (num >= 0) {
+//     for (let i = start; i >= 1; i--) {
+//       factorial *= i;
 //     }
+//     return factorial;
+//   } else {
+//     return `enter a positive number`;
 //   }
-//   console.log(sum);
 // }
-// addNum(1, 5);
 
-function calcFunc(num1, num2) {
-  let sum = 0;
+// const factorial = (num = 1) => {
+//   let factorial = num;
+//   let start = num - 1;
 
-  for (let i = num1; i <= num2; i++) {
-    sum += i;
-  }
+//   if (num >= 1) {
+//     for (let i = start; i >= 1; i--) {
+//       factorial *= i;
+//     }
+//     return factorial;
+//   } else {
+//     return `enter a number above 1`;
+//   }
+// };
 
-  return sum;
-}
-
-console.log(calcFunc(7, 3));
-
-//  1 + 2 + 3 + 4
-
-// num1 = 1;
-// i = num1  1st loop result 1
-// i =num1 +1   2nd loop 2
-// i = (num1+1) + 1 3rd loop 3
-// i = num1 +1 + 1 + 1 4th loop 4
-
-// i += i
-// i + i + i + i
-// i = i + i
-// new i value = old i value + 1
+// console.log(factorial());
