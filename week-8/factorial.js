@@ -11,10 +11,24 @@ const factorial = (num = 1) => {
       factorial *= i;
     }
   } else {
-    factorial = `"enter a number above 1"`;
+    factorial = `${null}: "enter a number above 1"`;
   }
   console.log(`${num}! = ${factorial}`);
   return factorial;
 };
 
-factorial(1);
+factorial(4);
+function findFactorial(num) {
+  let factorial = 1;
+  if (num > 1) {
+    for (let i = 1; i <= num; i++) {
+      factorial *= i;
+    }
+    return factorial;
+  } else if (num === 0 || num === 1) {
+    return factorial;
+  } else {
+    return null;
+  }
+}
+console.log(findFactorial(0));
